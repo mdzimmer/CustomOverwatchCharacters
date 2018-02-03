@@ -38,10 +38,22 @@ img.scaler {
 	height: auto;
 }
 </style>
+<script>
+	var vidScale = 0.8;
+	var vid = document.getElementById("vid");
+	doUpdateVid()
+	function updateVid() {
+		doUpdateVid()
+	}
+	function doUpdateVid() {
+		vid.height = window.innerHeight * vidScale;
+		vid.width = window.innerHeight * vidScale;
+	}
+</script>
 </head>
-<body class="parallax">
+<body class="parallax" onresize="updateVid()">
 <center>
-<iframe width=1536 height=864 src="https://www.youtube.com/embed/3exrV_pUziA">
+<iframe id="vid" src="https://www.youtube.com/embed/3exrV_pUziA">
 </iframe>
 <p class="white-text-with-blue-shadow">Lan</p>
 <img src="images/LanAbilities.png" class="scalar">
