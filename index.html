@@ -38,18 +38,6 @@ img.scaler {
 	height: auto;
 }
 </style>
-<script>
-	var vidScale = 0.8;
-	var vid = document.getElementById("vid");
-	doUpdateVid()
-	function updateVid() {
-		doUpdateVid()
-	}
-	function doUpdateVid() {
-		vid.height = window.innerHeight * vidScale;
-		vid.width = window.innerHeight * vidScale;
-	}
-</script>
 </head>
 <body class="parallax" onresize="updateVid()">
 <center>
@@ -61,4 +49,18 @@ img.scaler {
 <img src="images/Dialogue.png" class="scalar">
 </center>
 </body>
+<script>
+	var vidScale = 0.8;
+	var vid = document.getElementById('vid');
+	doUpdateVid()
+	function updateVid() {
+		doUpdateVid()
+	}
+	function doUpdateVid() {
+  	var width = window.innerWidth * vidScale;
+    var height = width * 0.625;
+		vid.width = width;
+		vid.height = height;
+	}
+</script>
 </html>
